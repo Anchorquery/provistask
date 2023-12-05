@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkserver_provitask=self.webpackChunkserver_provitask||[]).push([[9170],{69170:e=>{e.exports=JSON.parse('{"form.label":"UUID","form.description":"Generates UUID v4","form.field.generate":"Generate","form.field.regex":"The Regexp pattern to validate the UUID format.","form.field.error":"The UUID format is invalid."}')}}]);
