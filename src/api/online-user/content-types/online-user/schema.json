@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "online_users",
+  "info": {
+    "singularName": "online-user",
+    "pluralName": "online-users",
+    "displayName": "onlineUser",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "socket_id": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "lastConnection": {
+      "type": "datetime"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "online",
+        "offline"
+      ],
+      "default": "offline"
+    }
+  }
+}

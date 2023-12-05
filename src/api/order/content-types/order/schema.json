@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "task_assigned": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::task-assigned.task-assigned"
+    },
+    "total": {
+      "type": "decimal",
+      "default": 0
+    },
+    "sub_total": {
+      "type": "decimal",
+      "default": 0
+    },
+    "descuento": {
+      "type": "decimal"
+    },
+    "usuario": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "metodo_de_pago": {
+      "type": "string"
+    },
+    "estado": {
+      "type": "enumeration",
+      "enum": [
+        "requires_payment_method",
+        "requires_confirmation",
+        "requires_action",
+        "processing",
+        "requires_capture",
+        "canceled",
+        "succeeded"
+      ],
+      "default": "requires_payment_method",
+      "private": true
+    },
+    "paymentIntentId": {
+      "type": "string",
+      "unique": true
+    },
+    "paypal_sesion_id": {
+      "type": "string"
+    },
+    "paymentIntent": {
+      "type": "json"
+    },
+    "datosTarea": {
+      "type": "json",
+      "private": true
+    },
+    "monto_comision": {
+      "type": "decimal"
+    },
+    "provider": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

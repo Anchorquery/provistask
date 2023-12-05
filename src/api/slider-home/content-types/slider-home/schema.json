@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "slider_homes",
+  "info": {
+    "singularName": "slider-home",
+    "pluralName": "slider-homes",
+    "displayName": "Slider Home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "web",
+        "movil"
+      ],
+      "default": "movil"
+    },
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "skill": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::skill.skill"
+    }
+  }
+}

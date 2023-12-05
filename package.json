@@ -1,0 +1,48 @@
+{
+ "name": "server-provitask",
+ "private": true,
+ "version": "0.1.0",
+ "description": "Server provitask",
+ "scripts": {
+  "develop": "strapi develop",
+  "start": "strapi start",
+  "build": "strapi build",
+  "strapi": "strapi",
+  "docu": "strapi install documentation"
+ },
+ "dependencies": {
+  "@bn-digital/strapi-plugin-field-uuid": "^1.2.12",
+  "@googlemaps/google-maps-services-js": "^3.3.28",
+  "@strapi/plugin-documentation": "^4.13.6",
+  "@strapi/plugin-i18n": "4.13.6",
+  "@strapi/plugin-users-permissions": "4.13.6",
+  "@strapi/provider-email-nodemailer": "^4.13.6",
+  "@strapi/provider-email-sendgrid": "^4.13.6",
+  "@strapi/strapi": "4.13.6",
+  "firebase-admin": "^11.10.1",
+  "fs-extra": "^11.1.1",
+  "geolib": "^3.3.3",
+  "moment": "^2.29.4",
+  "mysql": "2.18.1",
+  "socket.io": "^4.6.1",
+  "strapi-plugin-duplicate-button": "^1.1.12",
+  "strapi-plugin-fcm": "^1.0.8",
+  "strapi-plugin-generate-data": "^1.0.23",
+  "strapi-plugin-populate-deep": "^3.0.0",
+  "strapi-plugin-rest-cache": "^4.2.8",
+  "strapi-plugin-slugify": "^2.3.3",
+  "stripe": "^12.3.0",
+  "uuid": "^9.0.0"
+ },
+ "author": {
+  "name": "A Strapi developer"
+ },
+ "strapi": {
+  "uuid": "d7049597-aafc-443a-aa2c-2e8dee18bbec"
+ },
+ "engines": {
+  "node": ">=12.x.x <=20.x.x",
+  "npm": ">=6.0.0"
+ },
+ "license": "MIT"
+}

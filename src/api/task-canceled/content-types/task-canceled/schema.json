@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "task_canceleds",
+  "info": {
+    "singularName": "task-canceled",
+    "pluralName": "task-canceleds",
+    "displayName": "task canceled "
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "task": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::task-assigned.task-assigned"
+    },
+    "reason": {
+      "type": "text"
+    },
+    "datetime": {
+      "type": "datetime"
+    },
+    "client": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "provider": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

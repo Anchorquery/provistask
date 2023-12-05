@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "valorations",
+  "info": {
+    "singularName": "valoration",
+    "pluralName": "valorations",
+    "displayName": "Valoration",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "valoration": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer"
+    },
+    "provider": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "client": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "categorias_skill": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::skill.skill"
+    },
+    "description": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    },
+    "task": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::task-assigned.task-assigned",
+      "inversedBy": "valoration"
+    }
+  }
+}

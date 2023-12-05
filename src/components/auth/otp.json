@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_json_otps",
+  "info": {
+    "displayName": "otp",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "number": {
+      "type": "string",
+      "required": false
+    },
+    "expiration": {
+      "type": "datetime"
+    },
+    "status": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

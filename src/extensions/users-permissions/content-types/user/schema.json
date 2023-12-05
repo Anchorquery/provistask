@@ -1,0 +1,177 @@
+{
+  "kind": "collectionType",
+  "collectionName": "up_users",
+  "info": {
+    "name": "user",
+    "description": "",
+    "singularName": "user",
+    "pluralName": "users",
+    "displayName": "User"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": false
+    },
+    "confirmationToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.role",
+      "inversedBy": "users",
+      "configurable": false
+    },
+    "isProvider": {
+      "type": "boolean",
+      "default": false
+    },
+    "postal_code": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "avatar_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "otp": {
+      "type": "component",
+      "repeatable": false,
+      "component": "auth.otp"
+    },
+    "location": {
+      "type": "component",
+      "repeatable": false,
+      "component": "location.location"
+    },
+    "lat": {
+      "type": "float",
+      "max": 90,
+      "min": -90,
+      "default": 90,
+      "required": false
+    },
+    "lng": {
+      "type": "float",
+      "required": false,
+      "default": 180,
+      "min": -180,
+      "max": 180
+    },
+    "open_disponibility": {
+      "type": "time"
+    },
+    "close_disponibility": {
+      "type": "time"
+    },
+    "type_provider": {
+      "type": "enumeration",
+      "enum": [
+        "normal",
+        "elite",
+        "great",
+        "not_provider"
+      ],
+      "default": "not_provider",
+      "required": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "stripe_customer_id": {
+      "type": "string",
+      "unique": false,
+      "private": true
+    },
+    "stripe_connect_id": {
+      "type": "string",
+      "private": true
+    },
+    "is_stripe_connect": {
+      "type": "boolean",
+      "default": false
+    },
+    "motorcycle": {
+      "type": "boolean",
+      "default": false
+    },
+    "car": {
+      "type": "boolean",
+      "default": false
+    },
+    "truck": {
+      "type": "boolean",
+      "default": false
+    },
+    "provider_skills": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::provider-skill.provider-skill",
+      "mappedBy": "provider"
+    },
+    "skillAndExperience": {
+      "type": "text"
+    },
+    "device_token": {
+      "type": "string",
+      "private": true
+    },
+    "notification": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chat_messages",
+  "info": {
+    "singularName": "chat-message",
+    "pluralName": "chat-messages",
+    "displayName": "Chat Message",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "message": {
+      "type": "text",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "delivered",
+        "error",
+        "seen",
+        "sending",
+        "sent"
+      ],
+      "default": "sending"
+    },
+    "datetime": {
+      "type": "datetime"
+    },
+    "emit": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "bot": {
+      "type": "boolean",
+      "default": false
+    },
+    "conversation": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::conversation.conversation"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "audio",
+        "custom",
+        "file",
+        "image",
+        "system",
+        "text",
+        "unsupported",
+        "video"
+      ]
+    },
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "clientId": {
+      "type": "customField",
+      "regex": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+      "customField": "plugin::field-uuid.uuid"
+    }
+  }
+}

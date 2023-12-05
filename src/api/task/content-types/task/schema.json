@@ -1,0 +1,96 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tasks",
+  "info": {
+    "singularName": "task",
+    "pluralName": "tasks",
+    "displayName": "Task",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "locationGeocoding": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "date": {
+      "type": "string"
+    },
+    "time_day": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::time-day.time-day"
+    },
+    "provider": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "averageScore": {
+      "type": "decimal",
+      "max": 5,
+      "min": 0
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "on_site_estimate": {
+      "type": "boolean",
+      "default": false
+    },
+    "countPurchase": {
+      "type": "biginteger",
+      "min": "0",
+      "default": "0"
+    },
+    "taskLength": {
+      "type": "enumeration",
+      "enum": [
+        "small",
+        "medium",
+        "large"
+      ],
+      "default": "small",
+      "required": true
+    },
+    "transportation": {
+      "type": "enumeration",
+      "enum": [
+        "not_necessary",
+        "motorcycle",
+        "car",
+        "truck"
+      ],
+      "default": "not_necessary",
+      "required": true
+    },
+    "comission": {
+      "type": "decimal",
+      "default": 12.45
+    },
+    "subtotal": {
+      "type": "decimal"
+    }
+  }
+}

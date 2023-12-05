@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notifications",
+  "info": {
+    "singularName": "notification",
+    "pluralName": "notifications",
+    "displayName": "notification",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "message",
+        "task",
+        "payment"
+      ],
+      "default": "message"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "raw": {
+      "type": "json"
+    },
+    "read": {
+      "type": "boolean",
+      "default": false
+    },
+    "datetime": {
+      "type": "datetime"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_location_locations",
+  "info": {
+    "displayName": "location",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "latitud": {
+      "type": "float",
+      "max": 90,
+      "min": -90,
+      "required": false,
+      "default": 90
+    },
+    "longitud": {
+      "type": "float",
+      "default": 180,
+      "required": false,
+      "max": 180,
+      "min": -180
+    },
+    "name": {
+      "type": "string"
+    },
+    "thoroughfare": {
+      "type": "string"
+    },
+    "locality": {
+      "type": "string"
+    },
+    "administrativeArea": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "place_id": {
+      "type": "string"
+    }
+  }
+}

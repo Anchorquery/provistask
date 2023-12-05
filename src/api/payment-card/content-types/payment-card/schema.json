@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_cards",
+  "info": {
+    "singularName": "payment-card",
+    "pluralName": "payment-cards",
+    "displayName": "Payment Card",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "card_number": {
+      "type": "string"
+    },
+    "expiration_date": {
+      "type": "string"
+    },
+    "cvc": {
+      "type": "string"
+    },
+    "owner_name": {
+      "type": "string"
+    },
+    "owner_country": {
+      "type": "string"
+    },
+    "owner_address": {
+      "type": "string"
+    },
+    "owner_zip_code": {
+      "type": "string"
+    },
+    "owner_state": {
+      "type": "string"
+    },
+    "client": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::client.client"
+    }
+  }
+}

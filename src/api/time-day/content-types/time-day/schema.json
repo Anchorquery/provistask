@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "time_days",
+  "info": {
+    "singularName": "time-day",
+    "pluralName": "time-days",
+    "displayName": "Time day"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "time": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    }
+  }
+}

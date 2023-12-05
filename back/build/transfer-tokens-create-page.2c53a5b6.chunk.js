@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkserver_provitask=self.webpackChunkserver_provitask||[]).push([[4816],{81524:(o,s,e)=>{e.r(s),e.d(s,{default:()=>a});var t=e(27279),r=e(61166),n=e(49402),E=e(36364),_=e(43467);const a=()=>{const P=(0,n.v9)(E._);return t.createElement(r.CheckPagePermissions,{permissions:P.settings["transfer-tokens"].create},t.createElement(_.Z,null))}}}]);
