@@ -59,7 +59,9 @@ module.exports = ({ env }) => ({
   enabled: true,
   //resolve: './src/plugins/strapi-plugin-fcm' // path to plugin folder
 },
-
+"strapi-google-auth": {
+  enabled: true,
+},
   
   // ...
 });

@@ -25,6 +25,7 @@
   "moment": "^2.29.4",
   "mysql": "2.18.1",
   "socket.io": "^4.6.1",
+  "strapi-google-auth": "^0.2.1",
   "strapi-plugin-duplicate-button": "^1.1.12",
   "strapi-plugin-fcm": "^1.0.8",
   "strapi-plugin-generate-data": "^1.0.23",
